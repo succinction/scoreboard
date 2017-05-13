@@ -38,6 +38,10 @@ user_jason = {usergame[game_num]: game}
 
 ## APP FLOW
 
+
+![Sample generated UML diagram](chart1.svg)
+
+
 ### When User Saves
 ```sequence
 user->app: Open
