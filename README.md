@@ -9,9 +9,9 @@ Frontend is already built aside from implementation of hooks to a backend and sc
 
 Frontend | Backend
 ----- | ---
-React js | Django Rest API
- 
-## Data
+React js, GSAP, AJAX | Django or Flask Rest API
+HTML, CSS | database: mongoDB or sql
+
 
 ### Jason 
 var: |  value
