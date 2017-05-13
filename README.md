@@ -3,7 +3,7 @@ Rest API Scoreboard
 
 ## Mini-Capstone Proposal
 API that stores and retrieves user scores.
-Front end is already built aside from implementation of hooks to a backend and scoreboard interface.
+Frontend is already built aside from implementation of hooks to a backend and scoreboard interface.
 
 ## Technologies
 
@@ -93,4 +93,3 @@ app->user: show game replay
 
 
 [TOC]
-
