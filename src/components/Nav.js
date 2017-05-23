@@ -29,7 +29,7 @@ class Nav extends Component {
 	}
    
     render() {
-    	const number_buttons = false;
+    	const number_buttons = true;
 
 
         return (

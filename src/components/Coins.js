@@ -65,7 +65,7 @@ change_coin_images = () => {
 
 
     componentWillUpdate(nextProps, nextState) {
-//        console.log("componentWillUpdate < ")
+       console.log("componentWillUpdate < ")
 //        this.change_coin_images()
 
     }

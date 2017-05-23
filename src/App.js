@@ -15,7 +15,6 @@ class App extends Component {
 				this.version = "version 2.03.1"
 				const initialNumberOfCoins = 12;
 				const lucky_number_init = Math.floor (Math.random () * initialNumberOfCoins);
-				this.coin_location_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 				this.coin_weights = [Number (6), Number (5), Number (7)];
 				this.coin_locations = "";
 				this.measurementsUsed = 0;
@@ -32,9 +31,28 @@ class App extends Component {
 				this.colr = {h:0, s:50, l:100};
 				this.element = document.getElementsByTagName("body")[0];
 				// /COLOR WARP
+				// this.coin_location_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+				// DYNAMICALLY GENERATE:
+				this.coin_location_array = this.reset_location_array();
+
 				document.onselectstart = function(){ return false; };
 				document.body.setAttribute('unselectable', 'on', 0);
 		}
+
+		reset_location_array = () => {
+
+		    console.log("entered reset_location..")
+		    let arr = [0,0]
+		    for (let i=0; i < this.state.coin_num ; i++) {
+		        arr.push(0);
+            }
+
+		    return arr
+        }
+
+
+
+
 		// COLOR WARP
 		applyColor = () => {
 				this.element.style.backgroundColor = "hsl(" + this.colr.h + "," + this.colr.s + "%," + this.colr.l + "%)";
@@ -164,7 +182,7 @@ class App extends Component {
 			this.tip_scale();
 		};
 		replace_coins = (zero) => {
-				let numberOfCoins = this.state.coin_num
+				let numberOfCoins = this.state.coin_num;
 				let speed = 0.5;
 		        let this_x = 800 / (numberOfCoins + 6);
 		        let this_coin = []; 
@@ -178,7 +196,9 @@ class App extends Component {
 		        TweenLite.to("#ankh", speed, {x: 60 + this_x * (numberOfCoins+1), y: 0,  ease: Power3.easeOut});
 
 				this.readout = this.coin_locations;
-				this.coin_location_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+				this.coin_location_array =  this.reset_location_array();
+                    // [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+				// this.coin_location_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 				this.coin_locations =  this.coin_location_array.toString ();
 //				this.coin_locations = "0,0,0,0,0,0,0,0,0,0,0,0,0,0";
 				this.readout += " : " + this.coin_locations;

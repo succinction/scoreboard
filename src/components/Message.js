@@ -9,7 +9,7 @@ class Message extends Component {
         return (
 
         <p className="messenger" id="messenger">
-        <span className="title" >TWELVE COINS puzzle</span>   ::    {this.props.msg}
+        <span className="title" >TWELVE COINS Puzzle</span>   ::    {this.props.msg}
         </p>
         );
     }
