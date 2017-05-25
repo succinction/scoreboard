@@ -47,7 +47,7 @@ Players can drag the coins onto the balancing scale to perform measurements. Whe
 <h4>Demonstration:</h4>
 <div className="video">
 <p>
-        {true && <iframe  id="video" width="640" height="360" src="https://www.youtube.com/embed/sk6q6sG-7Ls?rel=0" frameborder="0" allowfullscreen></iframe> }
+        {true && <iframe  id="video" width="640" height="360" src="https://www.youtube.com/embed/sk6q6sG-7Ls?rel=0"  allowFullScreen></iframe> }
 </p>
 </div>
 
