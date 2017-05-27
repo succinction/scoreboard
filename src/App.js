@@ -66,7 +66,7 @@ class App extends Component {
 
     balance_scale = (tc) => {
         console.log("balance_scale << << ")
-        // console.log(tc)
+        console.log(tc)
         // console.log(tc.changedTouches)
         // console.log(tc.changedTouches[0])
         // console.log(tc.changedTouches[0].clientY)
@@ -301,9 +301,16 @@ class App extends Component {
 
     };
     toggle_labels = () => {
+
+
+
+
         this.setState({
             labels: !this.state.labels
         });
+
+        this._child.labels = true;
+
 
     }
     show_cheat = () => {
